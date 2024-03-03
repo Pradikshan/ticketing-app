@@ -12,18 +12,22 @@ const TicketForm = () => {
 
     setFormData((prevState) => ({
       ...prevState,
-      [name]: [value],
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("api/Tickets", {
+    console.log("Form Data:", formData); // Check formData before sending
+
+    const res = await fetch("/api/Tickets", {
       method: "post",
       body: JSON.stringify({ formData }),
       "content-type": "application/json",
     });
+
+    console.log("Response:", res); // Check the response
 
     if (!res.ok) {
       throw new Error("Failed to create new ticket");
