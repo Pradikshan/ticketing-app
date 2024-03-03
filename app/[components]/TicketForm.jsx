@@ -137,6 +137,7 @@ const TicketForm = () => {
           <option value={"Started"}>Started</option>
           <option value={"Done"}>Done</option>
         </select>
+        <input type="submit" className="btn max-w-xs" value={"Create ticket"} />
       </form>
     </div>
   );
