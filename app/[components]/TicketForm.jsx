@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const TicketForm = () => {
+  const router = useRouter();
+
   const handleChange = (e) => {
     const value = e.target.value;
     const name = e.target.name;
@@ -26,6 +28,9 @@ const TicketForm = () => {
     if (!res.ok) {
       throw new Error("Failed to create new ticket");
     }
+
+    router.refresh();
+    router.push("/");
   };
 
   const startingTicketData = {
