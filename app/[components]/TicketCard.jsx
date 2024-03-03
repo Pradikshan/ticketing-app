@@ -19,9 +19,15 @@ const TicketCard = () => {
       {/* All ticket cards will be the same size regardless */}
       <div className="flex-grow"></div>
       {/*  */}
-      <div
-      <ProgressDisplay />
-      <StatusDisplay />
+      <div className="flex mt-2">
+        <div className="flex flex-col">
+          <p className="text-xs my-1">31/03/2024 10.00AM</p>
+          <ProgressDisplay />
+        </div>
+        <div className="ml-auto flex items-end">
+          <StatusDisplay />
+        </div>
+      </div>
     </div>
   );
 };
