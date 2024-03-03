@@ -34,13 +34,12 @@ const TicketForm = ({ ticket }) => {
         body: JSON.stringify({ formData }),
         "content-type": "application/json",
       });
+      console.log("Response:", res); // Check the response
     }
 
-    console.log("Response:", res); // Check the response
-
-    if (!res.ok) {
-      throw new Error("Failed to create new ticket");
-    }
+    // if (!res.ok) {
+    //   throw new Error("Failed to create new ticket");
+    // }
 
     router.refresh();
     router.push("/");
