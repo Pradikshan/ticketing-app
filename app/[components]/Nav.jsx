@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="flex justify-between bg-nav p-4">
       <div>
         <Link href={"/"}>
           <FontAwesomeIcon icon={faHome} className="icon" />
