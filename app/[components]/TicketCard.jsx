@@ -16,6 +16,10 @@ const TicketCard = () => {
       <h4>Ticket Title</h4>
       <hr className="h-px border-0 bg-page mb-2" />
       <p className="whitespace-pre-wrap">This is the ticket description!</p>
+      {/* All ticket cards will be the same size regardless */}
+      <div className="flex-grow"></div>
+      {/*  */}
+      <div
       <ProgressDisplay />
       <StatusDisplay />
     </div>
