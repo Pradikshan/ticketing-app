@@ -22,11 +22,19 @@ const TicketForm = ({ ticket }) => {
 
     console.log("Form Data:", formData); // Check formData before sending
 
-    const res = await fetch("/api/Tickets", {
-      method: "post",
-      body: JSON.stringify({ formData }),
-      "content-type": "application/json",
-    });
+    if (EDITMODE) {
+      const res = await fetch(`/api/Tickets/${ticket._id}`, {
+        method: "put",
+        body: JSON.stringify({ formData }),
+        "content-type": "application/json",
+      });
+    } else {
+      const res = await fetch("/api/Tickets", {
+        method: "post",
+        body: JSON.stringify({ formData }),
+        "content-type": "application/json",
+      });
+    }
 
     console.log("Response:", res); // Check the response
 
