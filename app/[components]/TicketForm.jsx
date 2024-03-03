@@ -57,6 +57,17 @@ const TicketForm = () => {
           value={formData.description}
           rows={5}
         />
+
+        <label htmlFor="category">Category</label>
+        <select
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        >
+          <option value={"Hardware problem"}>Hardware problem</option>
+          <option value={"Software problem"}>Software problem</option>
+          <option value={"Project"}>Project</option>
+        </select>
       </form>
     </div>
   );
