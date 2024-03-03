@@ -132,7 +132,11 @@ const TicketForm = () => {
           onChange={handleChange}
         />
         <label htmlFor="status">Status</label>
-        <select name="status" value={formData.status} onChange={}
+        <select name="status" value={formData.status} onChange={handleChange}>
+          <option value={"Not started"}>Not started</option>
+          <option value={"Started"}>Started</option>
+          <option value={"Done"}>Done</option>
+        </select>
       </form>
     </div>
   );
