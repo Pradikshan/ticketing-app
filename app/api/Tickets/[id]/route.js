@@ -35,7 +35,7 @@ export async function PUT(req, { params }) {
     const updateTicketData = await Ticket.findByIdAndDelete(id, {
       ...ticketData,
     });
-
+    console.log("UPDATE RAN");
     return NextResponse.json(
       { message: "Ticket updated successfully" },
       { status: 200 }
